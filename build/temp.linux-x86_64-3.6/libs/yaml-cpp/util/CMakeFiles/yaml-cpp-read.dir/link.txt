@@ -1,0 +1,1 @@
+/usr/bin/c++   -fPIC -g   CMakeFiles/yaml-cpp-read.dir/read.cpp.o  -o ../../../bin/read -Wl,-rpath,/home/ponop/pyFlightGoggles/build/lib.linux-x86_64-3.6 ../../../../lib.linux-x86_64-3.6/libyaml-cppd.so.0.6.3 
