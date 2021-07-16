@@ -1,14 +1,27 @@
-# FlightGoggles
+# pyFlightGoggles
 
-## Documentation, Installation, & Usage Instructions
-Please refer to the [project website](https://flightgoggles.mit.edu) for project information and our [code documentation](https://flightgoggles-documentation.scrollhelp.site/fg/) for installation and usage instructions. 
+Python API for photorealistic exteroceptive sensor simulation using Unity3D and python.
 
-## pyFlightGoggles Description
+Source from [project website](https://flightgoggles.mit.edu) 
 
-A framework for photorealistic exteroceptive sensor simulation using Unity3D and python.
+The source [code documentation](https://flightgoggles-documentation.scrollhelp.site/fg/) appears either outdated or had broken pages to begin with [(e.g. Error rendering macro 'mathblock' : Confluence server error: undefined)](https://flightgoggles-documentation.scrollhelp.site/fg/Multicopter-Dynamics.370999309.html#MulticopterDynamics-MotorDynamics))
+
+Personal notes on the installation process:  
+Renderer was a simple download, but the client installation was unexpectedly difficult.
+
+Installation with Docker/WSL2 as recommended had two major problems: python3.6 installation via deadsnakes PPA did not come with importlib-resources and 
+```
+pip install importlib-resources
+```
+got stuck on an OSX keychain import. [The solution](https://stackoverflow.com/a/67744064) was to boot XServer.  
+The next major problem was that Jupyter / Docker / WSL2 did not want to play ball with each other.
+
+Ultimately this seemed to be a limitation of the systems themselves, so I gave up the Docker route in favor of the Virtualenv/WSL2 installation.  
+The codebase had a variety of compatibility issues(e.g. OpenCV 4.x vs 3.x). The only "workaround" I found was to remove and reinstall everything to mirror their installation setup: Ubuntu 18.04, Python 3.6. Manually installed specific package versions to satisfy restraints.
+
+Overall: Docker route apparently works as normal on Ubuntu, but not with WSL2. Virtualenv on WSL2 requires exact adherence to their Ubuntu and Python version.
 
 ## Citation
-If you find this work useful for your research, please cite:
 ```bibtex
 @misc{1905.11377,
   Title = {FlightGoggles: Photorealistic Sensor Simulation for Perception-driven Robotics using Photogrammetry and Virtual Reality},
@@ -18,53 +31,6 @@ If you find this work useful for your research, please cite:
 }
 ```
 FlightGoggles: [Paper](https://arxiv.org/abs/1905.11377), [Website](http://flightgoggles.mit.edu)
-
-## Papers using this work
-
-```bibtex
-@inproceedings{antonini2018blackbird,
-  title={The Blackbird Dataset: A large-scale dataset for UAV perception in aggressive flight},
-  author={Antonini, Amado and Guerra, Winter and Murali, Varun and Sayre-McCord, Thomas and Karaman, Sertac},
-  booktitle={International Symposium on Experimental Robotics, {ISER} 2018, Buenos Aires,
-               Argentina, November 5-8, 2018.},
-  year={2018}
-}
-
-@article{antonini202IJRR,
-author = {Amado Antonini and Winter Guerra and Varun Murali and Thomas Sayre-McCord and Sertac Karaman},
-title ={The Blackbird UAV dataset},
-journal = {The International Journal of Robotics Research},
-volume = {39},
-number = {10-11},
-pages = {1346-1364},
-year = {2020},
-doi = {10.1177/0278364920908331},
-}
-
-@inproceedings{sayremccord2018visual,
-  title={Visual-inertial navigation algorithm development using photorealistic camera simulation in the loop},
-  author={Sayre-McCord, Thomas and
-  Guerra, Winter and
-  Antonini, Amado and
-  Arneberg, Jasper and
-  Brown, Austin and
-  Cavalheiro, Guilherme and
-  Fang, Yajun and
-  Gorodetsky, Alex and
-  McCoy, Dave and
-  Quilter, Sebastian and
-  Riether, Fabian and
-  Tal, Ezra and
-  Terzioglu, Yunus and
-  Carlone, Luca and
-  Karaman, Sertac},
-  booktitle={2018 IEEE International Conference on Robotics and Automation (ICRA)},
-  year={2018}
-}
-```
-Blackbird Dataset: [Paper](https://arxiv.org/abs/1810.01987), [Website](https://github.com/mit-fast/Blackbird-Dataset)
-
-Visual-inertial navigation algorithm development using photorealistic camera simulation in the loop: [Paper](https://doi.org/10.1109/icra.2018.8460692)
 
 ## Core Contributers
 
