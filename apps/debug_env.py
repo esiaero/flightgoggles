@@ -91,9 +91,9 @@ if __name__ == "__main__":
                 elif key == "2":
                     curr_unit -= 0.1
                 elif key == "3":
-                    curr_unit_yaw += 5
+                    curr_unit_yaw += np.pi/180
                 elif key == "4":
-                    curr_unit_yaw -= 5
+                    curr_unit_yaw -= np.pi/180
 
                 yaw_curr %= 2*np.pi
                 # r = R.from_euler('z', yaw_curr, degrees=True)

@@ -2,6 +2,15 @@
 
 Python API for photorealistic exteroceptive sensor simulation using Unity3D and python.
 
+To run, start the Unity3D render. Then in repo:
+```
+source venv/bin/activate
+```  
+Jupyter Notebook should be run as
+```
+http://localhost:8888/?token=127b48e88570feff6eb163df4b50369a6c85d761a8ba05dc
+```
+
 Source from [project website](https://flightgoggles.mit.edu) 
 
 The source [code documentation](https://flightgoggles-documentation.scrollhelp.site/fg/) appears either outdated or had broken pages to begin with [(e.g. Error rendering macro 'mathblock' : Confluence server error: undefined)](https://flightgoggles-documentation.scrollhelp.site/fg/Multicopter-Dynamics.370999309.html#MulticopterDynamics-MotorDynamics))
