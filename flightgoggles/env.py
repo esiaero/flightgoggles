@@ -91,7 +91,7 @@ class flightgoggles_env():
                 if 'state' in cfg:
                     self.cam_width = cfg['state']['camWidth']
                     self.cam_height = cfg['state']['camHeight']
-                
+
                 if 'renderer' in cfg:
                     for renderer_key in cfg['renderer'].keys():
                         self.fg_renderer[renderer_key] = \
@@ -101,7 +101,6 @@ class flightgoggles_env():
                                 output_port = cfg['renderer'][renderer_key]["outputPort"])
                         self.fg_render_cam_info[renderer_key] = 0
                         self.fg_render_obj_info[renderer_key] = 0
-                
                 if 'camera_model' in cfg:
                     ts = time.strftime('%Y-%b-%d-%H:%M:%S', time.gmtime())
                     self.camera_img_dir = os.path.join(self.tmp_dir, ts)
@@ -433,9 +432,9 @@ class flightgoggles_env():
         if self.vehicle_set[vehicle_id]["type"] != "uav":
             return
         self.vehicle_set[vehicle_id]["model"].proceed_waypoint(waypoint_command, duration)
-        self._update_state(vehicle_id)
+        isCollided = self._update_state(vehicle_id)
         self.flag_started = True
-        return
+        return isCollided
 
     def save_logs(self, vehicle_id=None, save_dir="data/"):
         # Save IMU and Camera data
@@ -581,6 +580,8 @@ class flightgoggles_env():
         # self.vehicle_set[vehicle_id]["model"].update_state_imu(duration)
         self.vehicle_set[vehicle_id]["logs"].append(copy.deepcopy(self.vehicle_set[vehicle_id]["model"].get_state()))
         
+        isCollided = False
+        
         # update object position
         if 'objectsInfo' in self.vehicle_set[vehicle_id]:
             for objects_key in self.vehicle_set[vehicle_id]['objectsInfo'].keys():
@@ -591,10 +592,10 @@ class flightgoggles_env():
         
         for cam_key in self.vehicle_set[vehicle_id]["model"].camera_info.keys():
             if self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["flag_update"]:
-                self._update_state_camera_single(cam_key, 
-                    self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["position"], 
-                    self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["attitude"],
-                    self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["cam_time_last"])
+                _, isCollided = self._update_state_camera_single(cam_key, 
+                                self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["position"], 
+                                self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["attitude"],
+                                self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["cam_time_last"])
                 self.vehicle_set[vehicle_id]["model"].camera_pose[cam_key]["flag_update"] = False
         
         # Update static camera
@@ -616,11 +617,13 @@ class flightgoggles_env():
                         [cam_key],
                         self.camera_set[cam_key]["cam_time_last"])
                     self.camera_set[cam_key]["cam_time_last"] += 1./self.camera_set[cam_key]["freq"]
-        return
+        return isCollided
 
+    # udpate uav position, called on proceed
     def _update_state_camera_single(self, camera_key, position, attitude, cam_time):
         res_t = dict()
         signal.signal(signal.SIGALRM, self.__timeout_handler__)
+        isCollided = False
         while True:
             try:
                 try:
@@ -641,6 +644,9 @@ class flightgoggles_env():
                         self.fg_renderer[self.camera_set[camera_key]["renderer"]].getTimestamp())
                     self.fg_renderer[self.camera_set[camera_key]["renderer"]].requestRender()
                     res, res_collision, res_landmark, res_lidar = self.fg_renderer[self.camera_set[camera_key]["renderer"]].getImage()
+                   
+                    isCollided = res_collision
+                    
                     for res_key in res.keys():
                         if res_key == camera_key:
                             img = res[res_key]
@@ -669,7 +675,7 @@ class flightgoggles_env():
                 continue
             signal.alarm(0)
             break
-        return res_t
+        return res_t, isCollided
 
     def _update_state_camera_static(self, camera_id_set=[], cam_time=0):
         res_t = dict()

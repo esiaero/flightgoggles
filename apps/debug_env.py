@@ -40,11 +40,11 @@ def timeout_handler(signum, frame):
 
 if __name__ == "__main__":
     # execute only if run as a script
-    env = flightgoggles_env(cfg_fgclient="FlightGogglesClient_debug_env.yaml")
+    env = flightgoggles_env(cfg_fgclient="FlightGogglesClient_testing.yaml")
     
     pos_curr = env.get_state("uav1")["position"]
     yaw_curr = env.get_state("uav1")["attitude_euler_angle"][2]
-    env.set_state_camera("cam0", \
+    env.set_state_camera("cam1", \
         pos_curr, \
         Euler2quat(np.array([0.,0.,yaw_curr])))
     print("position: [{}]".format(', '.join([str(x) for x in pos_curr])))
@@ -104,13 +104,13 @@ if __name__ == "__main__":
 
                 curr_pos_ = np.array([pos_curr[0],pos_curr[1],pos_curr[2],yaw_curr])
                 signal.alarm(1)
-                env.set_state_camera("cam0", \
+                env.set_state_camera("cam1", \
                     pos_curr, \
                     Euler2quat(np.array([0.,0.,yaw_curr])), flag_update_simulation=False)
             except Exception:
                 curr_pos_ = np.array([pos_curr[0],pos_curr[1],pos_curr[2],yaw_curr])
                 signal.alarm(1)
-                env.set_state_camera("cam0", \
+                env.set_state_camera("cam1", \
                     pos_curr, \
                     Euler2quat(np.array([0.,0.,yaw_curr])), flag_update_simulation=False)
                 continue

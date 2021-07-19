@@ -1,6 +1,6 @@
 state:
-    # sceneFilename: "Abandoned_Factory_Morning"
-    sceneFilename: "Stata_GroundFloor"
+    sceneFilename: "Abandoned_Factory_Sunset"
+    #sceneFilename: "Stata_GroundFloor"
     camWidth: 640
     camHeight: 480
     camFOV: 70.0
@@ -18,7 +18,7 @@ camera_model:
         renderer: 0
         freq: 30
         outputShaderType: -1
-        hasCollisionCheck: False
+        hasCollisionCheck: True
 
 vehicle_model:
     uav1:

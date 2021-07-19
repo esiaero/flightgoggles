@@ -11,9 +11,9 @@ Jupyter Notebook should be run as
 http://localhost:8888/?token=127b48e88570feff6eb163df4b50369a6c85d761a8ba05dc
 ```
 
-Source from [project website](https://flightgoggles.mit.edu) 
+Renderer binary supported maps here: https://github.com/mit-aera/FlightGoggles/releases
 
-The source [code documentation](https://flightgoggles-documentation.scrollhelp.site/fg/) appears either outdated or had broken pages to begin with [(e.g. Error rendering macro 'mathblock' : Confluence server error: undefined)](https://flightgoggles-documentation.scrollhelp.site/fg/Multicopter-Dynamics.370999309.html#MulticopterDynamics-MotorDynamics))
+Source from [project website](https://flightgoggles.mit.edu) 
 
 Personal notes on the installation process:  
 Renderer was a simple download, but the client installation was unexpectedly difficult.
