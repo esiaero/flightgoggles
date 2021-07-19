@@ -7,6 +7,15 @@ Jupyter Notebook should be run w/ WSL2 as:
 ```
 jupyter notebook --no-browser
 ```
+<<<<<<< HEAD
+=======
+http://localhost:8888/?token=127b48e88570feff6eb163df4b50369a6c85d761a8ba05dc
+```
+
+Renderer binary supported maps here: https://github.com/mit-aera/FlightGoggles/releases
+
+Source from [project website](https://flightgoggles.mit.edu) 
+>>>>>>> b8a5f37d... env collision return
 
 Renderer binary supported maps here: https://github.com/mit-aera/FlightGoggles/releases
 

@@ -17,7 +17,7 @@ camera_model:
         channels: 3 # dont forget! change for RGB (3)
         renderer: 0
         freq: 30
-        outputShaderType: -1 # -1 for RGB
+        outputShaderType: -1
         hasCollisionCheck: True
 
 vehicle_model:

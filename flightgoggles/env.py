@@ -435,15 +435,6 @@ class flightgoggles_env():
         isCollided = self._update_state(vehicle_id)
         self.flag_started = True
         return isCollided
-    
-    # can write forward waypoint following in this function or maybe outside? 
-#     def speed_to_waypoint(self, vehicle_id, waypoint_command, duration):
-#         if self.vehicle_set[vehicle_id]["type"] != "uav":
-#             return
-#         self.vehicle_set[vehicle_id]["model"].proceed_waypoint(waypoint_command, duration)
-#         isCollided = self._update_state(vehicle_id)
-#         self.flag_started = True
-#         return isCollided
 
     def save_logs(self, vehicle_id=None, save_dir="data/"):
         # Save IMU and Camera data
@@ -655,7 +646,6 @@ class flightgoggles_env():
                     self.fg_renderer[self.camera_set[camera_key]["renderer"]].requestRender()
                     
                     res, res_collision, res_landmark, res_lidar = self.fg_renderer[self.camera_set[camera_key]["renderer"]].getImage()
-                    
                     isCollided = res_collision
                     
                     for res_key in res.keys():

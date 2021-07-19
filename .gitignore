@@ -1,4 +1,5 @@
 notebooks/data/
+<<<<<<< HEAD
 flightgoggles/__pycache__/
 .ipynb_checkpoints
 tmp/
@@ -6,3 +7,7 @@ flightgoggles.egg-info/
 dist/
 venv/
 build/
+=======
+.ipynb_checkpoints
+tmp/
+>>>>>>> b8a5f37d... env collision return
