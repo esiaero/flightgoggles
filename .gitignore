@@ -2,3 +2,6 @@ notebooks/data/
 .ipynb_checkpoints
 tmp/
 flightgoggles.egg-info/
+dist/
+venv/
+build/
