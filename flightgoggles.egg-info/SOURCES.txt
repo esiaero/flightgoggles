@@ -1,8 +1,0 @@
-LICENSE
-README.md
-setup.cfg
-setup.py
-flightgoggles.egg-info/PKG-INFO
-flightgoggles.egg-info/SOURCES.txt
-flightgoggles.egg-info/dependency_links.txt
-flightgoggles.egg-info/top_level.txt
