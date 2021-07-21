@@ -2,18 +2,17 @@
 
 Python API for photorealistic exteroceptive sensor simulation using Unity3D and python.
 
-To run, start the Unity3D render. Then in repo:
+Note: Should be run with venv.  
+Jupyter Notebook should be run w/ WSL2 as:
 ```
-source venv/bin/activate
-```  
-Jupyter Notebook should be run as
-```
-http://localhost:8888/?token=127b48e88570feff6eb163df4b50369a6c85d761a8ba05dc
+jupyter notebook --no-browser
 ```
 
 Renderer binary supported maps here: https://github.com/mit-aera/FlightGoggles/releases
 
-Source from [project website](https://flightgoggles.mit.edu) 
+Original/source [project website](https://flightgoggles.mit.edu) 
+
+---
 
 Personal notes on the installation process:  
 Renderer was a simple download, but the client installation was unexpectedly difficult.
@@ -28,7 +27,7 @@ The next major problem was that Jupyter / Docker / WSL2 did not want to play bal
 Ultimately this seemed to be a limitation of the systems themselves, so I gave up the Docker route in favor of the Virtualenv/WSL2 installation.  
 The codebase had a variety of compatibility issues(e.g. OpenCV 4.x vs 3.x). The only "workaround" I found was to remove and reinstall everything to mirror their installation setup: Ubuntu 18.04, Python 3.6. Manually installed specific package versions to satisfy restraints.
 
-Overall: Docker route apparently works as normal on Ubuntu, but not with WSL2. Virtualenv on WSL2 requires exact adherence to their Ubuntu and Python version.
+Overall: Docker route apparently works as normal on Ubuntu, but not with WSL2. Venv on WSL2 requires exact adherence to their Ubuntu and Python version.
 
 ## Citation
 ```bibtex
