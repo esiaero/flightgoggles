@@ -628,6 +628,7 @@ class flightgoggles_env():
             try:
                 try:
                     signal.alarm(1)
+
                     for key_t in self.camera_set.keys():
                         if key_t != camera_key:
                             # print("key_t: {}".format(self.camera_set[key_t]["index"]))
@@ -636,15 +637,16 @@ class flightgoggles_env():
                                 self.camera_set[key_t]["currentAtt"], 
                                 self.camera_set[key_t]["index"])
 
+
                     self.fg_renderer[self.camera_set[camera_key]["renderer"]].setCameraPose(position, attitude, self.camera_set[camera_key]["index"])
                     self.camera_set[camera_key]["currentPos"] = position
                     self.camera_set[camera_key]["currentAtt"] = attitude
-                    
                     self.fg_renderer[self.camera_set[camera_key]["renderer"]].setStateTime( \
                         self.fg_renderer[self.camera_set[camera_key]["renderer"]].getTimestamp())
                     self.fg_renderer[self.camera_set[camera_key]["renderer"]].requestRender()
+                    
                     res, res_collision, res_landmark, res_lidar = self.fg_renderer[self.camera_set[camera_key]["renderer"]].getImage()
-                   
+                    
                     isCollided = res_collision
                     
                     for res_key in res.keys():

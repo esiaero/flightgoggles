@@ -1,0 +1,32 @@
+state:
+    sceneFilename: "Abandoned_Factory_Sunset"
+    #sceneFilename: "Stata_GroundFloor"
+    camWidth: 640
+    camHeight: 480
+    camFOV: 70.0
+    camDepthScale: 0.20
+
+renderer:
+    0:
+        inputPort: "10253"
+        outputPort: "10254"
+
+camera_model:
+    # collision testing cam
+    1:
+        ID: testing_cam
+        channels: 3
+        renderer: 0
+        freq: 30
+        outputShaderType: -1
+        hasCollisionCheck: True
+
+vehicle_model:
+    # for collision testing - necesary?
+    uav_collision_tester:
+        type: "uav"
+        initialPose: [-6.5, -18.5, -2, 0.707, 0, 0, -0.707]
+        imu_freq: 200
+        cameraInfo:
+            testing_cam:
+                relativePose: [0, 0, 0, 1, 0, 0, 0]
