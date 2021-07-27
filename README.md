@@ -14,20 +14,6 @@ Original/source [project website](https://flightgoggles.mit.edu)
 
 ---
 
-Personal notes on the installation process:  
-Renderer was a simple download, but the client installation was unexpectedly difficult.
-
-Installation with Docker/WSL2 as recommended had two major problems: python3.6 installation via deadsnakes PPA did not come with importlib-resources and 
-```
-pip install importlib-resources
-```
-got stuck on an OSX keychain import. [The solution](https://stackoverflow.com/a/67744064) was to boot XServer.  
-The next major problem was that Jupyter / Docker / WSL2 did not want to play ball with each other.
-
-Ultimately this seemed to be a limitation of the systems themselves, so I gave up the Docker route in favor of the Virtualenv/WSL2 installation.  
-The codebase had a variety of compatibility issues(e.g. OpenCV 4.x vs 3.x). The only "workaround" I found was to remove and reinstall everything to mirror their installation setup: Ubuntu 18.04, Python 3.6. Manually installed specific package versions to satisfy restraints.
-
-Overall: Docker route apparently works as normal on Ubuntu, but not with WSL2. Venv on WSL2 requires exact adherence to their Ubuntu and Python version.
 
 ## Citation
 ```bibtex
