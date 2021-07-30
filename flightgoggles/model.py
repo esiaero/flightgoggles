@@ -438,6 +438,12 @@ class MulticopterModel(VehicleModel):
         self.proceed_motor_speed(motor_command, dt)
         return
     
+    # same as proceed_waypoint rn
+    def speed_waypoint(self, waypoint_command, dt):
+        motor_command = self.controller_waypoint.control_update(waypoint_command, self.pos, self.vel, self.att, self.angV, self.angA, dt)
+        self.proceed_motor_speed(motor_command, dt)
+        return
+    
     def proceed_idle(self, dt):
         pose = np.zeros(4)
         pose[:3] = self.pos
