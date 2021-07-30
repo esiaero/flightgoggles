@@ -416,17 +416,17 @@ class flightgoggles_env():
         if self.vehicle_set[vehicle_id]["type"] != "uav":
             return
         self.vehicle_set[vehicle_id]["model"].proceed_motor_speed(motor_command, duration)
-        self._update_state(vehicle_id)
+        isCollided = self._update_state(vehicle_id)
         self.flag_started = True
-        return
+        return isCollided
 
     def proceed_angular_rate(self, vehicle_id, angular_rate_command, thrust_command, duration):
         if self.vehicle_set[vehicle_id]["type"] != "uav":
             return
         self.vehicle_set[vehicle_id]["model"].proceed_angular_rate(angular_rate_command, thrust_command, duration)
-        self._update_state(vehicle_id)
+        isCollided = self._update_state(vehicle_id)
         self.flag_started = True
-        return
+        return isCollided
     
     def proceed_waypoint(self, vehicle_id, waypoint_command, duration):
         if self.vehicle_set[vehicle_id]["type"] != "uav":
