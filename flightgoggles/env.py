@@ -436,13 +436,14 @@ class flightgoggles_env():
         self.flag_started = True
         return isCollided
     
-    def speed_waypoint(self, vehicle_id, waypoint_command, duration):
-        if self.vehicle_set[vehicle_id]["type"] != "uav":
-            return
-        self.vehicle_set[vehicle_id]["model"].speed_waypoint(waypoint_command, duration)
-        isCollided = self._update_state(vehicle_id)
-        self.flag_started = True
-        return isCollided
+    # can write forward waypoint following in this function or maybe outside? 
+#     def speed_to_waypoint(self, vehicle_id, waypoint_command, duration):
+#         if self.vehicle_set[vehicle_id]["type"] != "uav":
+#             return
+#         self.vehicle_set[vehicle_id]["model"].speed_waypoint(waypoint_command, duration)
+#         isCollided = self._update_state(vehicle_id)
+#         self.flag_started = True
+#         return isCollided
 
     def save_logs(self, vehicle_id=None, save_dir="data/"):
         # Save IMU and Camera data
