@@ -440,7 +440,7 @@ class flightgoggles_env():
 #     def speed_to_waypoint(self, vehicle_id, waypoint_command, duration):
 #         if self.vehicle_set[vehicle_id]["type"] != "uav":
 #             return
-#         self.vehicle_set[vehicle_id]["model"].speed_waypoint(waypoint_command, duration)
+#         self.vehicle_set[vehicle_id]["model"].proceed_waypoint(waypoint_command, duration)
 #         isCollided = self._update_state(vehicle_id)
 #         self.flag_started = True
 #         return isCollided
