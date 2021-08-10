@@ -1,0 +1,4 @@
+with start pose at [  0. -15.  -2.   0.], target [  9.         -24.          -2.           1.57079633], num_waypoints 5, epsilon 2.5, & overshoot 2.5... it took 4.75 sec
+with start pose at [  0.         -15.          -2.           1.57079633], target [  9.         -24.          -2.           3.14159265], num_waypoints 5, epsilon 2.5, & overshoot 2.5... it took 4.52 sec
+with start pose at [  0.         -15.          -2.           1.57079633], target [  9.         -24.          -2.           3.14159265], num_waypoints 5, epsilon 2.5, & overshoot 0.0... it took 4.93 sec
+with start pose at [  0.         -15.          -2.           1.57079633], target [  9.         -24.          -2.           3.14159265], num_waypoints 5, epsilon 2.5, & overshoot 2.5... it took 4.34 sec
