@@ -42,3 +42,6 @@ with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 5.4, & oversh
 with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.5, & overshoot 4.5... it took 8.85 sec
 with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.0, & overshoot 4.0... it took 8.12 sec
 with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.3, & overshoot 4.3... it took 8.33 sec
+with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.3, & overshoot 4.3... it took 9.13 sec
+with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.3, & overshoot 4.3... it took 9.12 sec
+with rad 8, center at [0, -10.0, -22.0], num_waypoints 70, epsilon 4.3, & overshoot 4.3... it took 8.95 sec

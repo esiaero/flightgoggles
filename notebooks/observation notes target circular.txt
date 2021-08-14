@@ -1,0 +1,16 @@
+with rad 10, center at [0, -10.0, -22.0], num_waypoints 20, epsilon 1.0, & AMBITION 2.0... it took 18.94 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 60, epsilon 1.0, & AMBITION 4.0... it took 11.97 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 60, epsilon 1.0, & AMBITION 5.0... it took 10.44 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 100, epsilon 1.0, & AMBITION 5.0... it took 10.90 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 100, epsilon 1.0, & AMBITION 6.0... it took 10.03 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it took 16.56 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it took 14.91 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 2.0... it took 20.71 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 3.0... it took 13.44 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 11.36 sec
+-- attitude consideration here --
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 10.51 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 10.53 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 10.33 sec
+-- attitude improvement here --
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it took 9.65 sec
