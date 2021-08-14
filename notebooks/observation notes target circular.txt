@@ -14,3 +14,30 @@ with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBIT
 with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 10.33 sec
 -- attitude improvement here --
 with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it took 9.65 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 13.55 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 12.53 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 13.45 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 12.66 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 11.67 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 12.08 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 11.46 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 4.0... it took 11.50 sec
+-- tuning max speed/angrate --
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it took 46.12 sec 
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 11.00 sec
+-- regular --
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.0... it took 10.73 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.4... it took 9.71 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.8... it took 10.19 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 6.0... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 1.0, & AMBITION 5.8... it took 10.72 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 60, epsilon 1.0, & AMBITION 5.8... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 60, epsilon 1.0, & AMBITION 3.2... it took 13.74 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 1.0, & AMBITION 5.2... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 1.0, & AMBITION 5.5... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 1.0, & AMBITION 5.0... it took 10.29 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 1.0, & AMBITION 5.4... it crashed :(
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 1.0, & AMBITION 5.2... it crashed :(

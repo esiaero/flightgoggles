@@ -71,7 +71,7 @@ flightgoggles_pid:
     gain_attitude_z: 10.0
     thrust_direction: [0., 0., -1.]
     max_acceleration: 100.0
-    max_angrate: 100.0
+    max_angrate: 30.0
     max_speed: 100.0
 
 sim_freq: 960 # Hz
