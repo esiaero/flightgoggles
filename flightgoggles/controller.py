@@ -290,7 +290,7 @@ class UAV_pid_waypoint(UAV_pid_angular_rate):
         self.intState_ = np.fmin(np.fmax(-self.intBound_,self.intState_),self.intBound_)
         angAccCommand = self.propGain_*stateDev + \
             self.intGain_*self.intState_ - self.derGain_*curattAcc
-
+        
         propSpeedCommand = self.thrust_mixing(angAccCommand, res["thrust"])
 
         return propSpeedCommand
