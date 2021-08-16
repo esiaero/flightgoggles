@@ -67,3 +67,4 @@ with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 2.0, & AMBIT
 with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 2.0, & AMBITION 6.0... it took 8.19 sec
 with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 2.0, & AMBITION 6.4... it crashed :(
 with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 3.0, & AMBITION 6.4... it took 7.78 sec
+with rad 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 3.0, & AMBITION 6.4... it took 7.80 sec

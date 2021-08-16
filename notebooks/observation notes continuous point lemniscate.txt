@@ -1,0 +1,5 @@
+with half-width 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 2.0, & AMBITION 3.0... it took 10.65 sec
+with half-width 10, center at [0, -10.0, -30.0], num_waypoints 10, epsilon 2.0, & AMBITION 5.0... it crashed :(
+with half-width 15, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 3.0, & AMBITION 3.0... it took 14.31 sec
+with half-width 15, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 3.0, & AMBITION 4.0... it took 11.88 sec
+with half-width 15, center at [0, -10.0, -30.0], num_waypoints 20, epsilon 3.0, & AMBITION 5.0... it took 10.43 sec
